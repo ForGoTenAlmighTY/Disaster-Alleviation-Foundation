@@ -107,6 +107,7 @@ header {
                 right: 0;
             }
 
+
 main .featured {
     display: flex;
     flex-direction: column;
@@ -117,6 +118,12 @@ main .featured {
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+div .auto-style9 {
+    background-image: url(image/cute-purple-aesthetic-abstract-minimal-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
     main .featured h1 {

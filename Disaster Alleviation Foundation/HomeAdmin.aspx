@@ -54,24 +54,35 @@
             text-align: center;
             vertical-align: middle
         }
+
         .auto-style4 {
             height: 37px;
             color: coral;
             font-size: 20px;
         }
+
         .auto-style5 {
             height: 45px;
             color: coral;
             font-size: 20px;
         }
+
         .auto-style6 {
             margin-bottom: 18px;
         }
+
         .auto-style7 {
             margin-bottom: 15px;
         }
+
         .auto-style8 {
             margin-left: 431px;
+        }
+
+        .auto-style9 {
+            background-image: url(image/cute-purple-aesthetic-abstract-minimal-background.png);
+             background-repeat: no-repeat;
+            background-size: cover;
         }
     </style>
 </head>
@@ -96,11 +107,11 @@
 
             <div class="auto-style2" style="height: 153px">
                 <h2 class="auto-style3">Welcome to Back Administrator</h2>
-      
+
             </div>
         </header>
 
-
+        <div class="auto-style9">
         <div class="auto-style8">
  <div class="recentlyadded content-wrapper">
                 <h2 class="auto-style1">Users</h2>
@@ -206,11 +217,14 @@
 
         </div>
 
+        </div>
+       
 
 
 
 
-        <footer>
+
+        <footer class="auto-style9">
             <div class="content-wrapper">
                 <p>@2022 Disaster Alleviation Foundation</p>
             </div>
