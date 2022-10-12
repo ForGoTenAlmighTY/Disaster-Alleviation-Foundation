@@ -13,5 +13,11 @@ namespace Disaster_Alleviation_Foundation
         {
 
         }
+
+
+        protected void btnDisaster_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/DisasterForm.aspx");
+        }
     }
 }
