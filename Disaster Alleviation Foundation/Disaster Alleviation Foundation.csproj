@@ -260,7 +260,6 @@
     <Content Include="image\bg.jpg" />
     <Content Include="image\books-library-shelves.jpg" />
     <Content Include="Home.aspx" />
-    <Content Include="image\cute-purple-aesthetic-abstract-minimal-background.png" />
     <Content Include="LogIn.aspx" />
     <Content Include="MoneyAllocationForm.aspx" />
     <Content Include="MoneyForm.aspx" />
