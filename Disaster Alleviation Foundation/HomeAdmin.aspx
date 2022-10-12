@@ -73,6 +73,11 @@
         .auto-style8 {
             margin-left: 431px;
         }
+        .auto-style9 {
+            background-image: url(image/cute-purple-aesthetic-abstract-minimal-background.png);
+             background-repeat: no-repeat;
+            background-size: cover;
+        }
     </style>
 </head>
 
@@ -100,8 +105,8 @@
             </div>
         </header>
 
-
-        <div class="auto-style8">
+        <div class="auto-style9">
+<div class="auto-style8">
  <div class="recentlyadded content-wrapper">
                 <h2 class="auto-style1">Users</h2>
                 <asp:GridView ID="GridView1" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataGoods" Height="168px" Width="770px" CellSpacing="2" CssClass="auto-style6" DataKeyNames="UserID">
@@ -205,6 +210,9 @@
             </div>
 
         </div>
+
+        </div>
+        
 
 
 

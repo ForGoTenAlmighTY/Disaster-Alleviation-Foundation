@@ -107,6 +107,7 @@ header {
                 right: 0;
             }
 
+
 main .featured {
     display: flex;
     flex-direction: column;
@@ -118,6 +119,8 @@ main .featured {
     justify-content: center;
     text-align: center;
 }
+
+
 
     main .featured h1 {
         display: inline-block;
