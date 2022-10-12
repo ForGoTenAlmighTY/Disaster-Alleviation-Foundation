@@ -13,5 +13,17 @@ namespace Disaster_Alleviation_Foundation.image
         {
 
         }
+
+        protected void btnGoods_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/GoodsForm.aspx");
+        }
+
+        protected void btnMoney_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/MoneyForm.aspx");
+        }
+
+        
     }
 }
