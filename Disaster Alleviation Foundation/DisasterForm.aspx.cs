@@ -30,7 +30,7 @@ namespace Disaster_Alleviation_Foundation
 
 
             con.Close();
-            Response.Redirect("~/Home.aspx");
+            Response.Redirect("~/HomeAdmin.aspx");
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Disaster_Alleviation_Foundation
             SqlConnection con = new SqlConnection(@"Server=tcp:disasterfoundation.database.windows.net,1433;Initial Catalog=DisasterAlleviationDatabase;Persist Security Info=False;User ID=DisasterAlleviation;Password=Vikitar15!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
             //INSERT QUERY TO THE DATABASE
-            SqlCommand sqlCommand = new SqlCommand("INSERT INTO Item VALUES ('" + txtName.Text + "','" + txtPrice.Text + ")", con);
+            SqlCommand sqlCommand = new SqlCommand("INSERT INTO Item VALUES ('" + txtName.Text + "','" + txtPrice.Text + "')", con);
             con.Open();
 
 

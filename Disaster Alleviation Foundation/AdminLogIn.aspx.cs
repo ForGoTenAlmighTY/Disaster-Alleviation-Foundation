@@ -21,7 +21,7 @@ namespace Disaster_Alleviation_Foundation
             //CONNECTION TO THE DATABASE
             SqlConnection con = new SqlConnection(@"Server=tcp:disasterfoundation.database.windows.net,1433;Initial Catalog=DisasterAlleviationDatabase;Persist Security Info=False;User ID=DisasterAlleviation;Password=Vikitar15!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM WebAdmin WHERE email='" + txtEmail.Text + "' AND AdminPassword ='" + txtPassword.Text + "'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM USERS WHERE Email='" + txtEmail.Text + "' AND Password ='" + txtPassword.Text + "'", con);
             con.Open();
 
             //EXECUTES THE QUERY DECLARED

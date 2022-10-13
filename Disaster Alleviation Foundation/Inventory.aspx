@@ -53,6 +53,7 @@
     </style>
 </head>
 <body>
+    <form id="form2" runat="server">
     <header>
         <div class="content-wrapper">
             <h1>Disaster Alleviation Foundation</h1>
@@ -77,25 +78,7 @@
 
             <div>
                 <div class="auto-style8">
-                    <div class="recentlyadded content-wrapper">
-                        <h2 class="auto-style5">Inventory</h2>
-                        <asp:GridView ID="GridView2" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataDisaster" Height="165px" Width="646px" CellSpacing="2" CssClass="auto-style6">
-                            <Columns>
-                                <asp:BoundField DataField="GoodsName" HeaderText="GoodsName" SortExpression="GoodsName" />
-                                <asp:BoundField DataField="Allocated Disaster" HeaderText="Allocated Disaster" SortExpression="Allocated Disaster" />
-                            </Columns>
-                            <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
-                            <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
-                            <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
-                            <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
-                            <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
-                            <SortedAscendingCellStyle BackColor="#FFF1D4" />
-                            <SortedAscendingHeaderStyle BackColor="#B95C30" />
-                            <SortedDescendingCellStyle BackColor="#F1E5CE" />
-                            <SortedDescendingHeaderStyle BackColor="#93451F" />
-                        </asp:GridView>
-                        <asp:SqlDataSource ID="SqlDataDisaster" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT Inventory.UserID, Item.GoodsName, Disaster.Location AS 'Allocated Disaster' FROM Inventory INNER JOIN Item ON Inventory.ItemID = Item.ID INNER JOIN USERS ON Inventory.UserID = USERS.UserID INNER JOIN Disaster ON Inventory.DisID = Disaster.DisID"></asp:SqlDataSource>
-                    </div>
+                    
                 </div>
 
             </div>
@@ -137,10 +120,10 @@
                         <div class="login-wrap p-4 p-md-5">
 
                             <h3 class="text-center mb-4">Add Category</h3>
-                            <form id="form2" runat="server">
+                            
                                 <div class="form-group">
                                     <p class="auto-style6">Choose Item</p>
-                                    <asp:DropDownList ID="DropDisaster" class="form-control rounded-left" placeholder="Select Category" runat="server" DataSourceID="SqlDataCategory" DataValueField="Name" required>
+                                    <asp:DropDownList ID="DropDisaster" class="form-control rounded-left" placeholder="Select Category" runat="server" DataSourceID="SqlDataSource1" DataValueField="GoodsName" required DataTextField="GoodsName">
                                     </asp:DropDownList>
                                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT [GoodsName] FROM [Item]"></asp:SqlDataSource>
 

@@ -51,7 +51,7 @@
 									</label>
 								</div>
 								<div class="w-50 text-md-right">
-									<a href="https://disasteralleviationfoundation1.azurewebsites.net/Register.aspx"><span class="checkbox-primary">Not Admin?</span></a>
+									<a href="https://disasteralleviationfoundation1.azurewebsites.net/LogIn.aspx"><span class="checkbox-primary">Not Admin?</span></a>
 								</div>
 	            </div>
 	            <div class="form-group">

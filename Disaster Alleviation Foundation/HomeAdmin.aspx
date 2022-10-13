@@ -135,14 +135,12 @@
                 </h2>
                 <asp:GridView ID="GridView4" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource3" Height="168px" Width="770px" CellSpacing="2" CssClass="auto-style6">
                     <Columns>
-                        <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
                         <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
                         <asp:BoundField DataField="Quantity" HeaderText="Quantity" SortExpression="Quantity" />
                         <asp:BoundField DataField="Category" HeaderText="Category" SortExpression="Category" />
-                        <asp:BoundField DataField="DateDonation" HeaderText="Date Donation" SortExpression="DateDonation" />
-                        <asp:BoundField DataField="DonorName" HeaderText="Donor Name" SortExpression="DonorName" />
-                        <asp:BoundField DataField="NumItems" HeaderText="Number of Items" SortExpression="NumItems" />
-                        <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
+                        <asp:BoundField DataField="DateDonation" HeaderText="DateDonation" SortExpression="DateDonation" />
+                        <asp:BoundField DataField="DonorName" HeaderText="DonorName" SortExpression="DonorName" />
+                        <asp:BoundField DataField="NumItems" HeaderText="NumItems" SortExpression="NumItems" />
                     </Columns>
                     <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
                     <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
@@ -154,7 +152,7 @@
                     <SortedDescendingCellStyle BackColor="#F1E5CE" />
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                     </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT [ID], [Description], [Quantity], [Category], [DateDonation], [DonorName], [NumItems], [Price] FROM [Goods]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT [Description], [Quantity], [Category], [DateDonation], [DonorName], [NumItems] FROM [Goods]"></asp:SqlDataSource>
                
             </div>
 
@@ -185,15 +183,15 @@
             <div class="recentlyadded content-wrapper">
                 <h2 class="auto-style5">Disasters Aid
                 </h2>
-<asp:GridView ID="GridView2" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataDisaster" Height="165px" Width="646px" CellSpacing="2" CssClass="auto-style6">
+<asp:GridView ID="GridView2" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataDisaster" Height="165px" Width="646px" CellSpacing="2" CssClass="auto-style6" DataKeyNames="DisID">
                     <Columns>
-                        <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
-                        <asp:BoundField DataField="AidTypes" HeaderText="Aid Types" SortExpression="AidTypes" />
-                        <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
+                        <asp:BoundField DataField="StartDate" HeaderText="StartDate" SortExpression="StartDate" />
+                        <asp:BoundField DataField="EndDate" HeaderText="EndDate" SortExpression="EndDate" />
+                        <asp:BoundField DataField="DisID" HeaderText="DisID" SortExpression="DisID" InsertVisible="False" ReadOnly="True" />
                         <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
-                        <asp:BoundField DataField="EndDate" HeaderText="End Date" SortExpression="EndDate" />
-                        <asp:BoundField DataField="StartDate" HeaderText="Start Date" SortExpression="StartDate" />
-                        <asp:BoundField DataField="status" HeaderText="Status" SortExpression="status" />
+                        <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
+                        <asp:BoundField DataField="AidTypes" HeaderText="AidTypes" SortExpression="AidTypes" />
+                        <asp:BoundField DataField="status" HeaderText="status" SortExpression="status" />
                     </Columns>
                     <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
                     <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
@@ -205,7 +203,7 @@
                     <SortedDescendingCellStyle BackColor="#F1E5CE" />
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                     </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataDisaster" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT [AidTypes], [Description], [Location], [EndDate], [StartDate], [status], [ID] FROM [Disaster]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataDisaster" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT [StartDate], [EndDate], [DisID], [Location], [Description], [AidTypes], [status] FROM [Disaster]"></asp:SqlDataSource>
                 <asp:Button ID="btnDisaster" class="btn" runat="server" Text="New Disaster Aid" Height="59px" Width="146px" OnClick="btnDisaster_Click" />
             </div>
 

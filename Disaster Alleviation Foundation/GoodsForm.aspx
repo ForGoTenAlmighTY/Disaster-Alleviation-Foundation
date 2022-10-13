@@ -63,6 +63,12 @@
             color: darkmagenta;
             margin-bottom: 0px;
         }
+        .auto-style10 {
+            position: relative;
+            left: 0px;
+            top: 0px;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -93,13 +99,14 @@
         <div class="auto-style8">
             <div class="recentlyadded content-wrapper">
                 <h2 class="auto-style5">Active Disasters Aid</h2>
-                <asp:GridView ID="GridView2" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataDisaster" Height="165px" Width="646px" CellSpacing="2" CssClass="auto-style6">
+                <asp:GridView ID="GridView2" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataDisaster" Height="165px" Width="646px" CellSpacing="2" CssClass="auto-style6" DataKeyNames="Disaster Number">
                     <Columns>
-                        <asp:BoundField DataField="StartDate" HeaderText="Start Date" SortExpression="StartDate" />
-                        <asp:BoundField DataField="EndDate" HeaderText="End Date" SortExpression="EndDate" />
-                        <asp:BoundField DataField="AidTypes" HeaderText="Aid Types" SortExpression="AidTypes" />
+                        <asp:BoundField DataField="AidTypes" HeaderText="AidTypes" SortExpression="AidTypes" />
                         <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
                         <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
+                        <asp:BoundField DataField="EndDate" HeaderText="EndDate" SortExpression="EndDate" />
+                        <asp:BoundField DataField="StartDate" HeaderText="StartDate" SortExpression="StartDate" />
+                        <asp:BoundField DataField="Disaster Number" HeaderText="Disaster Number" InsertVisible="False" ReadOnly="True" SortExpression="Disaster Number" />
                     </Columns>
                     <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
                     <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
@@ -111,7 +118,7 @@
                     <SortedDescendingCellStyle BackColor="#F1E5CE" />
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataDisaster" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT AidTypes, Description, Location, EndDate, StartDate FROM Disaster WHERE (status = 'Active')"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataDisaster" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT AidTypes, Description, Location, EndDate, StartDate, DisID AS 'Disaster Number' FROM Disaster WHERE (status = 'Active')"></asp:SqlDataSource>
             </div>
         </div>
 
@@ -130,13 +137,7 @@
                                     <asp:TextBox ID="txtNumItems" type="text" class="form-control rounded-left" placeholder="Number of Items" runat="server" required></asp:TextBox>
                                 </div>
 
-                                <div class="form-group">
-                                    <p class="auto-style6">Select your item</p>
-                                    <asp:DropDownList ID="DropItem" class="form-control rounded-left" placeholder="Select Category" runat="server" DataSourceID="SqlDataCategory" DataValueField="Name">
-                                    </asp:DropDownList>
-                                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT [GoodsName] FROM [Item]"></asp:SqlDataSource>
-
-                                </div>
+                                
 
                                 <div class="form-group d-flex">
 
@@ -148,15 +149,17 @@
                                     <asp:DropDownList ID="DropCategory" class="form-control rounded-left" placeholder="Select Category" runat="server" DataSourceID="SqlDataCategory" DataValueField="Name">
                                     </asp:DropDownList>
                                     <asp:SqlDataSource ID="SqlDataCategory" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT [Name] FROM [CATEGORY]"></asp:SqlDataSource>
-
+                                   
                                 </div>
-                                <div class="form-group">
-                                    <p class="auto-style6">Choose Disaster</p>
-                                    <asp:DropDownList ID="DropDisaster" class="form-control rounded-left" placeholder="Select Category" runat="server" DataSourceID="SqlDataCategory" DataValueField="Name">
-                                    </asp:DropDownList>
-                                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT [DisID] FROM [Disaster]"></asp:SqlDataSource>
-
+                            <div class="form-group">
+                                    <p class="auto-style6">Select Items</p>
+                                    <asp:DropDownList ID="DropItem" runat="server" class="form-control rounded-left" DataSourceID="SqlDataSource2" DataTextField="GoodsName" DataValueField="GoodsName"></asp:DropDownList>
+                                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT GoodsName FROM Item"></asp:SqlDataSource>
                                 </div>
+                            <div class="auto-style10">
+                                    <p class="auto-style6" >Select Disaster</p>
+                                <asp:DropDownList ID="DropDisaster" class="form-control rounded-left"  runat="server" DataSourceID="SqlDataDisaster" DataTextField="Disaster Number" DataValueField="Disaster Number"></asp:DropDownList>
+                                 </div>
 
                                 <div class="form-group">
                                     <p class="auto-style6">Date of Donation</p>

@@ -109,15 +109,15 @@
             <div class="recentlyadded content-wrapper">
                 <h2 class="auto-style1">Goods Donations
                 </h2>
-                <asp:GridView ID="GridView1" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataGoods" Height="168px" Width="770px" CellSpacing="2" CssClass="auto-style6">
+                <asp:GridView ID="GridView1" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataGoods" Height="168px" Width="770px" CellSpacing="2" CssClass="auto-style6" DataKeyNames="Disaster Number">
                     <Columns>
-                        <asp:BoundField DataField="DonorName" HeaderText="Donor Name" SortExpression="DonorName" />
-                        <asp:BoundField DataField="NumItems" HeaderText="Number Of Items" SortExpression="NumItems" />
-                        <asp:BoundField DataField="DateDonation" HeaderText="Date Donation" SortExpression="DateDonation" />
+                        <asp:BoundField DataField="NumItems" HeaderText="NumItems" SortExpression="NumItems" />
+                        <asp:BoundField DataField="DonorName" HeaderText="DonorName" SortExpression="DonorName" />
+                        <asp:BoundField DataField="DateDonation" HeaderText="DateDonation" SortExpression="DateDonation" />
                         <asp:BoundField DataField="Category" HeaderText="Category" SortExpression="Category" />
                         <asp:BoundField DataField="Quantity" HeaderText="Quantity" SortExpression="Quantity" />
                         <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
-                        <asp:DynamicField DataField="DisID" HeaderText="Disaster Number" />
+                        <asp:BoundField DataField="Disaster Number" HeaderText="Disaster Number" InsertVisible="False" ReadOnly="True" SortExpression="Disaster Number" />
                     </Columns>
                     <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
                     <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
@@ -129,7 +129,7 @@
                     <SortedDescendingCellStyle BackColor="#F1E5CE" />
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                     </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataGoods" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT Goods.NumItems, Goods.DonorName, Goods.DateDonation, Goods.Category, Goods.Quantity, Goods.Description, Disaster.DisID FROM Goods INNER JOIN Disaster ON Goods.DisID = Disaster.DisID"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataGoods" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT Goods.NumItems, Goods.DonorName, Goods.DateDonation, Goods.Category, Goods.Quantity, Goods.Description, Disaster.DisID AS 'Disaster Number' FROM Goods INNER JOIN Disaster ON Goods.DisID = Disaster.DisID"></asp:SqlDataSource>
                 <asp:Button ID="btnGoods" class="btn" runat="server" Text="Donate" Height="59px" Width="135px" OnClick="btnGoods_Click" />
             </div>
 
@@ -157,14 +157,14 @@
             <div class="recentlyadded content-wrapper">
                 <h2 class="auto-style5">Active Disasters Aid
                 </h2>
-<asp:GridView ID="GridView2" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataDisaster" Height="165px" Width="646px" CellSpacing="2" CssClass="auto-style6">
+<asp:GridView ID="GridView2" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataDisaster" Height="165px" Width="646px" CellSpacing="2" CssClass="auto-style6" DataKeyNames="Disaster Number">
                     <Columns>
-                        <asp:DynamicField DataField="DisID" HeaderText="Disaster Number" />
-                        <asp:BoundField DataField="StartDate" HeaderText="Start Date" SortExpression="StartDate" />
-                        <asp:BoundField DataField="EndDate" HeaderText="End Date" SortExpression="EndDate" />
-                        <asp:BoundField DataField="AidTypes" HeaderText="Aid Types" SortExpression="AidTypes" />
+                        <asp:BoundField DataField="AidTypes" HeaderText="AidTypes" SortExpression="AidTypes" />
                         <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
                         <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
+                        <asp:BoundField DataField="EndDate" HeaderText="EndDate" SortExpression="EndDate" />
+                        <asp:BoundField DataField="StartDate" HeaderText="StartDate" SortExpression="StartDate" />
+                        <asp:BoundField DataField="Disaster Number" HeaderText="Disaster Number" InsertVisible="False" ReadOnly="True" SortExpression="Disaster Number" />
                     </Columns>
                     <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
                     <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
@@ -176,7 +176,7 @@
                     <SortedDescendingCellStyle BackColor="#F1E5CE" />
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                     </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataDisaster" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT DisID, AidTypes, Description, Location, EndDate, StartDate FROM Disaster WHERE (status = 'Active')"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataDisaster" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT AidTypes, Description, Location, EndDate, StartDate, DisID AS 'Disaster Number' FROM Disaster WHERE (status = 'Active')"></asp:SqlDataSource>
             </div>
         </div>
 

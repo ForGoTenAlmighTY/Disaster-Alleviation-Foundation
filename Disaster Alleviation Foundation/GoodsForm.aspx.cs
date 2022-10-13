@@ -40,7 +40,7 @@ namespace Disaster_Alleviation_Foundation
             con.Close();
             Response.Redirect("~/Home.aspx");
 
-            DropItem.Text = "";
+           
             txtQuantity.Text = "";
             DropCategory.Text = "";
             txtDateDonation.Text = "";

@@ -25,8 +25,7 @@ namespace Disaster_Alleviation_Foundation
             {
                 txtDonorName.Text = "Anonymous";
             }
-            int session = custom.sessionID;
-
+            
             //INSERT QUERY TO THE DATABASE
             SqlCommand sqlCommand = new SqlCommand("INSERT INTO MoneyDonation VALUES ('" + txtAmount.Text + "','" + txtDateDonation.Text + "','" + txtDonorName.Text + "','" + Convert.ToInt32(DropDisaster.Text) + "')", con);
 
