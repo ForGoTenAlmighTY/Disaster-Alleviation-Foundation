@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="css/StyleSheet1.css">
     <link rel="stylesheet" href="css/style1.css">
     <style type="text/css">
-        
         .auto-style2 {
             background-image: url(image/bg.jpg);
             background-repeat: no-repeat;
@@ -38,25 +37,28 @@
             text-align: center;
             height: 74px;
         }
-                .auto-style5 {
+
+        .auto-style5 {
             height: 45px;
             color: coral;
             font-size: 20px;
-            text-align:center;
-        } .auto-style8 {
+            text-align: center;
+        }
+
+        .auto-style8 {
             margin-left: 431px;
         }
 
         .p {
-            
-            color:darkmagenta;
-            
+            color: darkmagenta;
         }
+
         .auto-style9 {
             background-image: url(image/cute-purple-aesthetic-abstract-minimal-background.png);
-             background-repeat: no-repeat;
+            background-repeat: no-repeat;
             background-size: cover;
         }
+
         .auto-style6 {
             color: darkmagenta;
             margin-bottom: 0px;
@@ -64,31 +66,34 @@
     </style>
 </head>
 <body>
-       <header>
-            <div class="content-wrapper">
-                <h1>Disaster Alleviation Foundation</h1>
-                <nav>
-                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/Home.aspx">Home</a>
-                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/LogIn.aspx">Log-Out</a>
-                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/GoodsForm.aspx">Donate Goods</a>
-                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/MoneyForm.aspx">Donate Money</a>
-                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/Inventory.aspx">Inventory</a>
-                </nav>
-
-            </div>
+    <form id="form2" runat="server">
 
 
-            <div class="auto-style2" style="height: 153px">
-                <h2 class="auto-style3">Donate Goods</h2>
-      
-            </div>
-        </header>
+    <header>
+        <div class="content-wrapper">
+            <h1>Disaster Alleviation Foundation</h1>
+            <nav>
+                <a href="https://.azurewebsites.net/Home.aspx">Home</a>
+                <a href="https://disasteralleviationfoundation1.azurewebsites.net/LogIn.aspx">Log-Out</a>
+                <a href="https://disasteralleviationfoundation1.azurewebsites.net/GoodsForm.aspx">Donate Goods</a>
+                <a href="https://disasteralleviationfoundation1.azurewebsites.net/MoneyForm.aspx">Donate Money</a>
+                <a href="https://disasteralleviationfoundation1.azurewebsites.net/Inventory.aspx">Inventory</a>
+            </nav>
+
+        </div>
+
+
+        <div class="auto-style2" style="height: 153px">
+            <h2 class="auto-style3">Donate Goods</h2>
+
+        </div>
+    </header>
 
     <div class="auto-style9">
         <div class="auto-style8">
-<div class="recentlyadded content-wrapper">
+            <div class="recentlyadded content-wrapper">
                 <h2 class="auto-style5">Active Disasters Aid</h2>
-<asp:GridView ID="GridView2" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataDisaster" Height="165px" Width="646px" CellSpacing="2" CssClass="auto-style6">
+                <asp:GridView ID="GridView2" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataDisaster" Height="165px" Width="646px" CellSpacing="2" CssClass="auto-style6">
                     <Columns>
                         <asp:BoundField DataField="StartDate" HeaderText="Start Date" SortExpression="StartDate" />
                         <asp:BoundField DataField="EndDate" HeaderText="End Date" SortExpression="EndDate" />
@@ -105,86 +110,96 @@
                     <SortedAscendingHeaderStyle BackColor="#B95C30" />
                     <SortedDescendingCellStyle BackColor="#F1E5CE" />
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
-                    </asp:GridView>
+                </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataDisaster" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT AidTypes, Description, Location, EndDate, StartDate FROM Disaster WHERE (status = 'Active')"></asp:SqlDataSource>
             </div>
         </div>
-        
- <section class="ftco-section">
-        <div class="container">
-             
 
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-5">
-                    <div class="login-wrap p-4 p-md-5">
-
-                        <h3 class="text-center mb-4">Goods Donation</h3>
-                        <form id="form1" runat="server">
-                            <div class="form-group">
-
-                                <asp:TextBox ID="txtNumItems" type="text" class="form-control rounded-left" placeholder="Number of Items" runat="server" required></asp:TextBox>
-                            </div>
-                            <div class="form-group">
-
-                                <asp:TextBox ID="txtDescription" type="text" class="form-control rounded-left" placeholder="Description" runat="server" required></asp:TextBox>
-                            </div>
-                            <div class="form-group d-flex">
-
-                                <asp:TextBox ID="txtQuantity" type="text" class="form-control rounded-left" placeholder="Quantity" runat="server" required></asp:TextBox>
-                            </div>
-                            <div class="form-group">
-                                <p class="auto-style6">Category</p>
-                                <asp:DropDownList ID="DropCategory" class="form-control rounded-left" placeholder="Select Category" runat="server" DataSourceID="SqlDataCategory" DataValueField="Name">
-                                </asp:DropDownList>
-                                <asp:SqlDataSource ID="SqlDataCategory" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT [Name] FROM [CATEGORY]"></asp:SqlDataSource>
-
-                            </div>
-                            <div class="form-group">
-                                <p class="auto-style6">Choose Disaster</p>
-                                <asp:DropDownList ID="DropDisaster" class="form-control rounded-left" placeholder="Select Category" runat="server" DataSourceID="SqlDataCategory" DataValueField="Name">
-                                </asp:DropDownList>
-                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT [DisID] FROM [Disaster]"></asp:SqlDataSource>
-
-                            </div>
-
-                            <div class="form-group">
-                                <p class="auto-style6">Date of Donation</p>
-                                <asp:TextBox ID="txtDateDonation" type="date" class="form-control rounded-left" placeholder="Date of Donation" runat="server" required></asp:TextBox>
-
-                            </div>
+        <section class="ftco-section">
+            <div class="container">
 
 
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-5">
+                        <div class="login-wrap p-4 p-md-5">
 
+                            <h3 class="text-center mb-4">Goods Donation</h3>
+                           
+                                <div class="form-group">
 
-                            <div class="form-group">
-
-                                <asp:TextBox ID="txtDonorName" type="text" class="form-control rounded-left" placeholder="Name(Anonymous if empty)" runat="server"></asp:TextBox>
-                            </div>
-
-                            <div class="form-group d-md-flex">
-                                <div class="w-50">
-                                    <label class="checkbox-wrap checkbox-primary">
-                                    </label>
+                                    <asp:TextBox ID="txtNumItems" type="text" class="form-control rounded-left" placeholder="Number of Items" runat="server" required></asp:TextBox>
                                 </div>
-                                <div class="w-50 text-md-right">
-                                    <a href="https://disasteralleviationfoundation20220901090608.azurewebsites.net/Category.aspx">Create New Category</a>
+
+                                <div class="form-group">
+                                    <p class="auto-style6">Select your item</p>
+                                    <asp:DropDownList ID="DropItem" class="form-control rounded-left" placeholder="Select Category" runat="server" DataSourceID="SqlDataCategory" DataValueField="Name">
+                                    </asp:DropDownList>
+                                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT [GoodsName] FROM [Item]"></asp:SqlDataSource>
+
                                 </div>
-                            </div>
+
+                                <div class="form-group d-flex">
+
+                                    <asp:TextBox ID="txtQuantity" type="text" class="form-control rounded-left" placeholder="Quantity" runat="server" required></asp:TextBox>
+                                </div>
+
+                                <div class="form-group">
+                                    <p class="auto-style6">Category</p>
+                                    <asp:DropDownList ID="DropCategory" class="form-control rounded-left" placeholder="Select Category" runat="server" DataSourceID="SqlDataCategory" DataValueField="Name">
+                                    </asp:DropDownList>
+                                    <asp:SqlDataSource ID="SqlDataCategory" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT [Name] FROM [CATEGORY]"></asp:SqlDataSource>
+
+                                </div>
+                                <div class="form-group">
+                                    <p class="auto-style6">Choose Disaster</p>
+                                    <asp:DropDownList ID="DropDisaster" class="form-control rounded-left" placeholder="Select Category" runat="server" DataSourceID="SqlDataCategory" DataValueField="Name">
+                                    </asp:DropDownList>
+                                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT [DisID] FROM [Disaster]"></asp:SqlDataSource>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <p class="auto-style6">Date of Donation</p>
+                                    <asp:TextBox ID="txtDateDonation" type="date" class="form-control rounded-left" placeholder="Date of Donation" runat="server" required></asp:TextBox>
+
+                                </div>
 
 
-                            <div class="form-group">
 
-                                <asp:Button ID="btnAddGoods" runat="server" class="btn btn-primary rounded submit p-3 px-5" Text="Donate" OnClick="btnAddGoods_Click" />
-                            </div>
-                        </form>
+
+                                <div class="form-group">
+
+                                    <asp:TextBox ID="txtDonorName" type="text" class="form-control rounded-left" placeholder="Name(Anonymous if empty)" runat="server"></asp:TextBox>
+                                </div>
+
+                                <div class="form-group d-md-flex">
+                                    <div class="w-50">
+                                        <label class="checkbox-wrap checkbox-primary">
+                                        </label>
+                                    </div>
+                                    <div class="w-50 text-md-right">
+                                        <a href="https://disasteralleviationfoundation20220901090608.azurewebsites.net/Category.aspx">Create New Category</a>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <asp:Button ID="btnAddGoods" runat="server" class="btn btn-primary rounded submit p-3 px-5" Text="Donate" OnClick="btnAddGoods_Click" />
+                                </div>
+                            
+                        </div>
                     </div>
                 </div>
-            </div>
-    </section>
+        </section>
 
     </div>
 
-   
+
+    </form>
+
+
+
 
 
     <script src="js/jquery.min.js"></script>

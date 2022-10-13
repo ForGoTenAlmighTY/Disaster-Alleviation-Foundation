@@ -51,7 +51,10 @@
 									</label>
 								</div>
 								<div class="w-50 text-md-right">
-									<a href="https://disasteralleviationfoundation20220901090608.azurewebsites.net/Register.aspx">Create Account?</a>
+									<a href="https://disasteralleviationfoundation1.azurewebsites.net/Register.aspx">Create Account?</a>
+								</div>
+					<div class="w-50 text-md-right">
+									<a href="https://disasteralleviationfoundation1.azurewebsites.net/AdminLogIn.aspx">Administrator Only</a>
 								</div>
 	            </div>
 	            <div class="form-group">

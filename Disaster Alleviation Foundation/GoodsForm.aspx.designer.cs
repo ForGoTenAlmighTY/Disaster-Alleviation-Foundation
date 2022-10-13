@@ -15,6 +15,15 @@ namespace Disaster_Alleviation_Foundation
     {
 
         /// <summary>
+        /// form2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
+
+        /// <summary>
         /// GridView2 control.
         /// </summary>
         /// <remarks>
@@ -33,15 +42,6 @@ namespace Disaster_Alleviation_Foundation
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataDisaster;
 
         /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
         /// txtNumItems control.
         /// </summary>
         /// <remarks>
@@ -51,13 +51,22 @@ namespace Disaster_Alleviation_Foundation
         protected global::System.Web.UI.WebControls.TextBox txtNumItems;
 
         /// <summary>
-        /// txtDescription control.
+        /// DropItem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDescription;
+        protected global::System.Web.UI.WebControls.DropDownList DropItem;
+
+        /// <summary>
+        /// SqlDataSource2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
 
         /// <summary>
         /// txtQuantity control.

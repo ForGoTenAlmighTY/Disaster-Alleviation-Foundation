@@ -25,7 +25,7 @@ namespace Disaster_Alleviation_Foundation
             }
 
             //INSERT QUERY TO THE DATABASE
-            SqlCommand sqlCommand = new SqlCommand("INSERT INTO Goods VALUES ('" + txtDescription.Text + "','" + txtQuantity.Text + "','" + DropCategory.Text + "','" + txtDateDonation.Text + "','" + txtDonorName.Text + "','" + txtNumItems.Text + "','" + Convert.ToInt32(DropDisaster.Text) + "')", con);
+            SqlCommand sqlCommand = new SqlCommand("INSERT INTO Goods VALUES ('" + DropItem.Text + "','" + txtQuantity.Text + "','" + DropCategory.Text + "','" + txtDateDonation.Text + "','" + txtDonorName.Text + "','" + txtNumItems.Text + "','" + Convert.ToInt32(DropDisaster.Text) + "')", con);
             //  SqlCommand sqlCommand = new SqlCommand("INSERT INTO Goods VALUES ('" + txtNumItems.Text + "','" + txtDescription.Text + "','" + txtQuantity.Text + "','" + DropCategory.Text + "','" + txtDateDonation.Text + "','" + txtDonorName.Text + "')", con);
 
             con.Open();
@@ -40,7 +40,7 @@ namespace Disaster_Alleviation_Foundation
             con.Close();
             Response.Redirect("~/Home.aspx");
 
-            txtDescription.Text = "";
+            DropItem.Text = "";
             txtQuantity.Text = "";
             DropCategory.Text = "";
             txtDateDonation.Text = "";
