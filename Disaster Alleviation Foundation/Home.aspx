@@ -154,7 +154,7 @@
                 <asp:Button ID="btnMoney" class="btn" runat="server" Text="Donate" Height="59px" Width="135px" OnClick="btnMoney_Click" />
             </div>
             <div class="recentlyadded content-wrapper">
-                <h2 class="auto-style5">Disasters Aid
+                <h2 class="auto-style5">Active Disasters Aid
                 </h2>
 <asp:GridView ID="GridView2" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataDisaster" Height="165px" Width="646px" CellSpacing="2" CssClass="auto-style6">
                     <Columns>
