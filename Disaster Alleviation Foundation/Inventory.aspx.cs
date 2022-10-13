@@ -8,19 +8,18 @@ using System.Web.UI.WebControls;
 
 namespace Disaster_Alleviation_Foundation
 {
-    public partial class Category : System.Web.UI.Page
+    public partial class Inventory : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
         protected void btnAddCategory_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Server=tcp:disasterfoundation.database.windows.net,1433;Initial Catalog=DisasterAlleviationDatabase;Persist Security Info=False;User ID=DisasterAlleviation;Password=Vikitar15!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
             //INSERT QUERY TO THE DATABASE
-            SqlCommand sqlCommand = new SqlCommand("INSERT INTO CATEGORY VALUES ('" + txtName.Text + "')", con);
+            SqlCommand sqlCommand = new SqlCommand("INSERT INTO Inventory VALUES ('" + DropDisaster.Text + "')", con);
             con.Open();
 
 
@@ -31,7 +30,7 @@ namespace Disaster_Alleviation_Foundation
 
 
             con.Close();
-            Response.Redirect("~/Goodsform.aspx");
+            Response.Redirect("~/Home.aspx");
 
         }
     }

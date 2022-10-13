@@ -263,6 +263,7 @@
     <Content Include="image\books-library-shelves.jpg" />
     <Content Include="Home.aspx" />
     <Content Include="image\cute-purple-aesthetic-abstract-minimal-background.png" />
+    <Content Include="Inventory.aspx" />
     <Content Include="LogIn.aspx" />
     <Content Include="MoneyAllocationForm.aspx" />
     <Content Include="MoneyForm.aspx" />
@@ -356,6 +357,13 @@
     </Compile>
     <Compile Include="HomeAdmin.aspx.designer.cs">
       <DependentUpon>HomeAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.aspx.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory.aspx.designer.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
     </Compile>
     <Compile Include="LogIn.aspx.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>

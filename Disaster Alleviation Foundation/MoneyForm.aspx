@@ -8,13 +8,13 @@
 
     <title>Monetery Donation</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet"/>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/StyleSheet1.css">
-    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/StyleSheet1.css"/>
+    <link rel="stylesheet" href="css/style1.css"/>
     <style type="text/css">
         .auto-style1 {
             height: 47px;
@@ -63,6 +63,11 @@
     color: darkmagenta;
     margin-bottom: 0px;
 }
+                .auto-style9 {
+            background-image: url(image/cute-purple-aesthetic-abstract-minimal-background.png);
+             background-repeat: no-repeat;
+            background-size: cover;
+        }
     </style>
 </head>
 <body>
@@ -86,9 +91,9 @@
 
         </div>
     </header>
-    <div>
+    <div class="auto-style9">
 
-        <div>
+        <div >
             <div class="auto-style8">
 <div class="recentlyadded content-wrapper">
                 <h2 class="auto-style5">Active Disasters Aid</h2>
