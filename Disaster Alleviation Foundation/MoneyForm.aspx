@@ -21,6 +21,9 @@
             color: coral;
             font-size: 20px;
         }
+        .auto-style8 {
+            margin-left: 431px;
+        }
 
         .auto-style2 {
             background-image: url(image/bg.jpg);
@@ -67,13 +70,13 @@
     <header>
         <div class="content-wrapper">
             <h1>Disaster Alleviation Foundation</h1>
-            <nav>
-                <a href="https://disasteralleviationfoundation20220901090608.azurewebsites.net/Home.aspx">Home</a>
-                <a href="https://disasteralleviationfoundation20220901090608.azurewebsites.net/LogIn.aspx">Log-Out</a>
-                <a href="https://disasteralleviationfoundation20220901090608.azurewebsites.net/GoodsForm.aspx">Donate Goods</a>
-                <a href="https://disasteralleviationfoundation20220901090608.azurewebsites.net/MoneyForm.aspx">Donate Money</a>
-                <a href="https://disasteralleviationfoundation20220901090608.azurewebsites.net/DisasterForm.aspx">New Disaster</a>
-            </nav>
+          <nav>
+                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/Home.aspx">Home</a>
+                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/LogIn.aspx">Log-Out</a>
+                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/GoodsForm.aspx">Donate Goods</a>
+                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/MoneyForm.aspx">Donate Money</a>
+                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/Inventory.aspx">Inventory</a>
+                </nav>
 
         </div>
 
@@ -83,8 +86,36 @@
 
         </div>
     </header>
+    <div>
 
-    <section class="ftco-section">
+        <div>
+            <div class="auto-style8">
+<div class="recentlyadded content-wrapper">
+                <h2 class="auto-style5">Active Disasters Aid</h2>
+<asp:GridView ID="GridView2" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataDisaster" Height="165px" Width="646px" CellSpacing="2" CssClass="auto-style6">
+                    <Columns>
+                        <asp:BoundField DataField="StartDate" HeaderText="Start Date" SortExpression="StartDate" />
+                        <asp:BoundField DataField="EndDate" HeaderText="End Date" SortExpression="EndDate" />
+                        <asp:BoundField DataField="AidTypes" HeaderText="Aid Types" SortExpression="AidTypes" />
+                        <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
+                        <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
+                    </Columns>
+                    <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+                    <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+                    <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#FFF1D4" />
+                    <SortedAscendingHeaderStyle BackColor="#B95C30" />
+                    <SortedDescendingCellStyle BackColor="#F1E5CE" />
+                    <SortedDescendingHeaderStyle BackColor="#93451F" />
+                    </asp:GridView>
+                <asp:SqlDataSource ID="SqlDataDisaster" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT AidTypes, Description, Location, EndDate, StartDate FROM Disaster WHERE (status = 'Active')"></asp:SqlDataSource>
+            </div>
+        </div>
+
+        </div>
+ <section class="ftco-section">
         <div class="container">
 
             <div class="row justify-content-center">
@@ -108,7 +139,13 @@
 
                                 <asp:TextBox ID="txtDonorName" type="text" class="form-control rounded-left" placeholder="Name(Anonymous if empty)" runat="server"></asp:TextBox>
                             </div>
+                             <div class="form-group">
+                                <p class="auto-style6">Choose Disaster</p>
+                                <asp:DropDownList ID="DropDisaster" class="form-control rounded-left" placeholder="Select Category" runat="server" DataSourceID="SqlDataCategory" DataValueField="Name">
+                                </asp:DropDownList>
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT [DisID] FROM [Disaster]"></asp:SqlDataSource>
 
+                            </div>
 
                             <div class="form-group">
 
@@ -120,6 +157,9 @@
             </div>
         </div>
     </section>
+
+    </div>
+   
 
     <footer>
         <div class="content-wrapper">

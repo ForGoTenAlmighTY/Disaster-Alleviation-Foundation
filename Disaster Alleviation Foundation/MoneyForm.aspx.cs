@@ -11,6 +11,7 @@ namespace Disaster_Alleviation_Foundation
 {
     public partial class MoneyForm : System.Web.UI.Page
     {
+        public Custom custom;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -24,17 +25,18 @@ namespace Disaster_Alleviation_Foundation
             {
                 txtDonorName.Text = "Anonymous";
             }
-
+            int session = custom.sessionID;
 
             //INSERT QUERY TO THE DATABASE
-            SqlCommand sqlCommand = new SqlCommand("INSERT INTO MoneyDonation VALUES ('" + txtAmount.Text + "','" + txtDateDonation.Text + "','" + txtDonorName.Text + "')", con);
+            SqlCommand sqlCommand = new SqlCommand("INSERT INTO MoneyDonation VALUES ('" + txtAmount.Text + "','" + txtDateDonation.Text + "','" + txtDonorName.Text + "','" + Convert.ToInt32(DropDisaster.Text) + "')", con);
+
             con.Open();
 
 
 
             SqlDataReader dataReader = sqlCommand.ExecuteReader();
-            SqlDataReader reader = dataReader;
 
+            SqlDataReader reader = dataReader;
 
 
             con.Close();

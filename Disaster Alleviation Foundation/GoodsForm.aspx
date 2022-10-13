@@ -64,32 +64,30 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="content-wrapper">
-            <h1>Disaster Alleviation Foundation</h1>
-            <nav>
-                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/HomeAdmin.aspx">Home</a>
+       <header>
+            <div class="content-wrapper">
+                <h1>Disaster Alleviation Foundation</h1>
+                <nav>
+                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/Home.aspx">Home</a>
                     <a href="https://disasteralleviationfoundation1.azurewebsites.net/LogIn.aspx">Log-Out</a>
-                    
-                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/CategoryAdmin.aspx">New Category</a>
-                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/GoodsAdmin.aspx">New Goods</a>
-                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/DisasterForm.aspx">New Disaster</a>
+                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/GoodsForm.aspx">Donate Goods</a>
+                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/MoneyForm.aspx">Donate Money</a>
+                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/Inventory.aspx">Inventory</a>
                 </nav>
 
-        </div>
+            </div>
 
 
-        <div class="auto-style2" style="height: 153px">
-            <h2 class="auto-style3">Donate Goods</h2>
-
-        </div>
-    </header>
+            <div class="auto-style2" style="height: 153px">
+                <h2 class="auto-style3">Donate Goods</h2>
+      
+            </div>
+        </header>
 
     <div class="auto-style9">
         <div class="auto-style8">
 <div class="recentlyadded content-wrapper">
-                <h2 class="auto-style5">Active Disasters Aid
-                </h2>
+                <h2 class="auto-style5">Active Disasters Aid</h2>
 <asp:GridView ID="GridView2" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataDisaster" Height="165px" Width="646px" CellSpacing="2" CssClass="auto-style6">
                     <Columns>
                         <asp:BoundField DataField="StartDate" HeaderText="Start Date" SortExpression="StartDate" />
