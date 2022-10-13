@@ -36,7 +36,7 @@
                             </div>
                             <div class="form-group">
 
-                                <asp:TextBox ID="txtMoney" type="text" class="form-control rounded-left" placeholder="Initial amount of money" runat="server" required></asp:TextBox>
+                                <asp:TextBox ID="txtMoney" type="text" class="form-control rounded-left" placeholder="Starting amount of money" runat="server" required></asp:TextBox>
                             </div>
                             <div class="form-group">
 
