@@ -33,6 +33,15 @@ namespace Disaster_Alleviation_Foundation
         protected global::System.Web.UI.WebControls.TextBox txtUsername;
 
         /// <summary>
+        /// txtMoney control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMoney;
+
+        /// <summary>
         /// txtEmail control.
         /// </summary>
         /// <remarks>
