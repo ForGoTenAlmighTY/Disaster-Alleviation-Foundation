@@ -67,6 +67,7 @@
                     <a href="https://disasteralleviationfoundation1.azurewebsites.net/GoodsForm.aspx">Donate Goods</a>
                     <a href="https://disasteralleviationfoundation1.azurewebsites.net/MoneyForm.aspx">Donate Money</a>
                     <a href="https://disasteralleviationfoundation1.azurewebsites.net/Inventory.aspx">Inventory</a>
+                  <a href="https://disasteralleviationfoundation1.azurewebsites.net/Statistics.aspx">Statistics</a>
                 </nav>
 
         </div>
