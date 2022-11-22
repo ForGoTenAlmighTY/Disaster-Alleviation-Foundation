@@ -72,11 +72,12 @@
             <div class="content-wrapper">
                 <h1>Disaster Alleviation Foundation</h1>
                 <nav>
-                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/HomeAdmin.aspx">Home</a>
-                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/LogIn.aspx">Log-Out</a>
-                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/CategoryAdmin.aspx">New Category</a>
-                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/GoodsAdmin.aspx">New Goods</a>
-                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/DisasterForm.aspx">New Disaster</a>
+                    <a href="https://.azurewebsites.net/Home.aspx">Home</a>
+                <a href="https://disasteralleviationfoundation1.azurewebsites.net/LogIn.aspx">Log-Out</a>
+                <a href="https://disasteralleviationfoundation1.azurewebsites.net/GoodsForm.aspx">Donate Goods</a>
+                <a href="https://disasteralleviationfoundation1.azurewebsites.net/MoneyForm.aspx">Donate Money</a>
+                <a href="https://disasteralleviationfoundation1.azurewebsites.net/Inventory.aspx">Inventory</a>
+                <a href="https://disasteralleviationfoundation1.azurewebsites.net/Statistics.aspx">Statistics</a>
                 </nav>
 
             </div>

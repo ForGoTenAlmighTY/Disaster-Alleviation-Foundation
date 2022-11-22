@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GoodsForm.aspx.cs" Inherits="Disaster_Alleviation_Foundation.GoodsForm" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Statistics.aspx.cs" Inherits="Disaster_Alleviation_Foundation.Statistics" %>
 
 <!DOCTYPE html>
 
