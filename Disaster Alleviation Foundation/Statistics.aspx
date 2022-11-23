@@ -45,7 +45,7 @@
         }
 
         .auto-style8 {
-            margin-left: 513px;
+            margin-left: 550px;
         }
 
         .p {
@@ -69,7 +69,7 @@
             margin-bottom: 48px;
         }
         .auto-style12 {
-            margin-left: 510px;
+            margin-left: 560px;
             margin-top: 76px;
             margin-bottom: 88px;
         }
