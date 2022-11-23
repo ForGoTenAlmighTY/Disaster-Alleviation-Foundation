@@ -42,7 +42,7 @@
             height: 45px;
             color: coral;
             font-size: 20px;
-            text-align: center;
+         
         }
 
         .auto-style8 {
@@ -142,7 +142,7 @@
 
                                 <div class="form-group d-flex">
 
-                                    <asp:TextBox ID="txtQuantity" type="text" class="form-control rounded-left" placeholder="Quantity" runat="server" required></asp:TextBox>
+                                    <asp:TextBox ID="txtQuantity" type="number" class="form-control rounded-left" placeholder="Quantity" runat="server" required></asp:TextBox>
                                 </div>
 
                                 <div class="form-group">

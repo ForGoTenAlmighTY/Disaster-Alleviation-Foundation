@@ -134,7 +134,7 @@
                         
                             <div class="form-group">
 
-                                <asp:TextBox ID="txtAmount" type="text" class="form-control rounded-left" placeholder="Enter Amount" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtAmount" type="number" class="form-control rounded-left" placeholder="Enter Amount" runat="server" required></asp:TextBox>
                             </div>
 
                             <div class="form-group">
