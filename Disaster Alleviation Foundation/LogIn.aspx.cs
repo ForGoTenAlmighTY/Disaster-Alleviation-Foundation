@@ -44,7 +44,7 @@ namespace Disaster_Alleviation_Foundation
             //CHECKS IF THE USER ENTERS THE CORRECT DETAIS TO LOGIN
             if (check == true)
             {
-                Response.Redirect("~/Home.aspx");
+                Response.Redirect("~/Statistics.aspx");
             }
             else
             {
