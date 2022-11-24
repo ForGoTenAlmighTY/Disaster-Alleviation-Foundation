@@ -15,3 +15,12 @@ variables:
 steps:
 - script: dotnet build Disaster Alleviation Foundation/Disaster Alleviation Foundation.sln --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'DisasterAlleviationFoundation1 - Azure'
+    appType: 'webApp'
+    WebAppName: 'DisasterAlleviationFoundation1'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+
