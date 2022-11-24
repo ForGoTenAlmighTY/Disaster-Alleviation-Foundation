@@ -36,5 +36,5 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: test
-    projects: '**/*.csproj'
+    projects: '**BalanceTest2/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
